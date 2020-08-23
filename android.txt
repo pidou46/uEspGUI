@@ -1,0 +1,3 @@
+title=EspGuiApp
+author=stephane lestang
+orientation=portrait

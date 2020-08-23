@@ -1,0 +1,68 @@
+#:kivy 1.0.5
+
+<EspGui>
+    BoxLayout:
+        orientation:'vertical'
+        Label:
+            text:"uPyEspGui"
+            size_hint: (1,None)
+            height:'32sp'
+        Accordion:
+            orientation:'vertical'
+            AccordionItem:
+                id: ai_connexion
+                title:"Not connected"
+                BoxLayout:
+                    orientation:'vertical'
+                    BoxLayout:
+                        orientation:'horizontal'
+                        size_hint: (1,None)
+                        height: '32sp'
+                        Label:
+                            text: "IP addr:"
+                            size_hint:(0.3,1)
+						TextInput:
+							id: txt_addr
+                            multiline: False
+                            text: root.addr
+							on_text: root.addr=self.text
+                            size_hint: (0.7,1)
+                    BoxLayout:
+                        orientation:'horizontal'
+                        size_hint: (1,None)
+                        height: '32sp'
+                        Label:
+                            text: "port:"
+                            size_hint: (0.3,1)
+						TextInput:
+							id: txt_port
+							multiline: False
+                            text: root.port
+							on_text: root.port=self.text
+                            size_hint: (0.7,1)
+                    BoxLayout:
+                        orientation:'horizontal'
+                        size_hint: (1,None)
+                        height: '32sp'
+                        padding: (10,5,10,5)
+                        spacing: 5
+                        ToggleButton:
+                            id: tb_say_hello
+                            text: "Say Hello"
+                            group: 'connexion'
+                            on_press: root.do_say_hello()
+                        ToggleButton:
+                            id:tb_disconnect
+                            text: "Disconnect"
+                            group: 'connexion'
+                            state: 'down'
+                            on_press: root.do_disconnect()
+                    Label:
+                        id: l_status
+                        text_size: (root.width, None)
+                        size: self.texture_size
+            AccordionItem:
+                title:"Second Item"
+            AccordionItem:
+                title:"Third Item"
+        

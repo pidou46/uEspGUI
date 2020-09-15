@@ -24,4 +24,6 @@ I have choosed Kivy for the following reasons:
 - cross platform: Linux, Windows, OS X, Android, iOS
 - responsive (support python asyncio)
 
-
+#Related projects:
+https://github.com/tve/mqboard
+https://github.com/kevinkk525/pysmartnode

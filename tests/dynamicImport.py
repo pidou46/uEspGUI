@@ -1,3 +1,5 @@
+'''dynamicaly import a module, get class object from name and instanciate'''
+
 moduleName = 'my_module'
 my_module = __import__(moduleName)
 

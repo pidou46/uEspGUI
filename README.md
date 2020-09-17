@@ -10,35 +10,35 @@ mcu's are often short in resources (RAM, ROM, MIPS, ect...) and build fancy GUI 
 
 Wireless communication with mcu is whildly available today. Sometimes the wireless device is becoming the mcu in this case the solution become even more efficient on cost and power consumption point of view. ESP32 is a good example.
 
-##Wireless communication
+## Wireless communication
 micropython-ESP32 is BLE and WIFI enabled
 
 I would choose WIFI to begin
 
 
 
-##GUI toolkit
+## GUI toolkit
 
 I have choosed Kivy for the following reasons:
 - python library
 - cross platform: Linux, Windows, OS X, Android, iOS
 - responsive (support python asyncio)
 
-#Related projects:
+# Related projects:
 https://github.com/tve/mqboard
 
 https://github.com/kevinkk525/pysmartnode
 
 
-##Project breakdown
+## Project breakdown
 
-###client:
-####datas:
+### client:
+#### datas:
 1 client = 1 mcu
 data = {} partage par tous les sensors
 sensors=liste de sensor
 
-####methodes:
+#### methodes:
 init: herite de iot client
 add sensor: importe dynamiquement le module associé
 write: envoie les données au serveur, re-initialise data
@@ -48,15 +48,15 @@ read: lit les données depuis le serveur
 
 
 
-###sensor:
+### sensor:
 n * sensor par client
 
-####methodes:
+#### methodes:
  init: ID, pins, 
  capture: ajoute une ligne a data avec ID+horodatage+donnees
 
 
 
-###driver:
+### driver:
 fonctions minimale pour faire fonctionner le capteur et/ou actionneur.
 

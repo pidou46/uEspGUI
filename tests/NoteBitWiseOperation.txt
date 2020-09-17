@@ -1,0 +1,18 @@
+
+Bitwise left shift: Décalage vers la gauche au niveau du bit
+
+<< correspond à 2^n (en python pow(1,2))
+
+donc : << 2 correspond à * 2
+
+128 << 2 donne 512
+
+En binaire pour passer le bit n à 1: 1 << 14 cela revoin un entier 16384 qui correspond à 0b100000000000000
+
+
+
+
+
+
+BIT14 = const(1 << 14)
+

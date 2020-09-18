@@ -40,8 +40,11 @@ sensors=liste de sensor
 
 #### methodes:
 init: herite de iot client
+
 add sensor: importe dynamiquement le module associé
+
 write: envoie les données au serveur, re-initialise data
+
 read: lit les données depuis le serveur
 
 
@@ -53,6 +56,7 @@ n * sensor par client
 
 #### methodes:
  init: ID, pins, 
+ 
  capture: ajoute une ligne a data avec ID+horodatage+donnees
 
 

@@ -46,7 +46,8 @@ upload_sensor: upload module from server's /lib directory in client /lib directo
 1 client = 1 mcu
 
 data: shared list by all sensors objects and the client object. This allow each sensor to update the list and client to read it. 
-sensors=liste de sensor. To acheive this data is a class variable of Data class. Client and Sensor class inherit from Data to gain access to data list. 
+sensors=liste de sensor. To acheive this data is a class variable of Data class. Client and Sensor class inherit from Data to gain access to data list.
+Gathering data in a list allow to send chuncks of datas together to optimise network communication. 
 
 #### methods:
 init: herite de iot client
@@ -68,15 +69,20 @@ read: lit les données depuis le serveur
 
 
 ### sensor:
-n * sensor par client
+One client can manage one or more sensor.
+A sensor is an additional layer on top of driver, this layer gives uniform interface between drivers and client.
 
+An arbitrary Sensor should overide Sensor class methods to adapt data from driver to uniform data model.
+
+#### variables:
+ID, pins,
 #### methodes:
- init: ID, pins, 
+ init:
  
  capture: ajoute une ligne a data avec ID+horodatage+donnees
 
 
-
 ### driver:
-fonctions minimale pour faire fonctionner le capteur et/ou actionneur.
+Minimal implementation to gather data from hardware device, as instance: DTH22 temperature humidity sensor.
+
 

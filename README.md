@@ -33,19 +33,20 @@ https://github.com/kevinkk525/pysmartnode
 ## Project breakdown
 
 ### client:
-#### datas:
+#### data:
 1 client = 1 mcu
 
-data = {} partage par tous les sensors
-
+data is shared by all sensors objects and the client object. This allow each sensor to update the list and client to read it. 
 sensors=liste de sensor
 
-#### methodes:
+#### methods:
 init: herite de iot client
 
 add sensor: importe dynamiquement le module associé
 
 write: envoie les données au serveur, re-initialise data
+convert data to string using json module
+
 
 read: lit les données depuis le serveur
 

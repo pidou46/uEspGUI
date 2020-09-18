@@ -35,8 +35,8 @@ https://github.com/kevinkk525/pysmartnode
 ### server:
 
 #### methods:
-init: herite de iot client
 
+upload_sensor: upload module from server's /lib directory in client /lib directory
 
 
 
@@ -61,7 +61,6 @@ convert data to string using json module
 
 read: lit les données depuis le serveur
 
-upload_sensor: upload module from server's /lib directory in client /lib directory
 
 
 

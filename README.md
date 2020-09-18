@@ -35,7 +35,9 @@ https://github.com/kevinkk525/pysmartnode
 ### client:
 #### datas:
 1 client = 1 mcu
+
 data = {} partage par tous les sensors
+
 sensors=liste de sensor
 
 #### methodes:
